@@ -1,7 +1,7 @@
 # Weather App Kotlin-MVVM
 ## Technologies used <br/>
 **-MVVM** <br/>
-**LiveData** <br/>
+**-LiveData** <br/>
 **-Retrofit** <br/>
 **-RxJava** <br/>
 **-ViewBinding** <br/>
