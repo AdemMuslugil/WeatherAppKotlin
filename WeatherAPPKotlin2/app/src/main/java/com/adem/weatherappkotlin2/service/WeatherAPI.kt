@@ -1,16 +1,18 @@
 package com.adem.weatherappkotlin2.service
 
 import com.adem.weatherappkotlin2.model.WeatherModel
+import com.adem.weatherappkotlin2.util.API_KEY
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherAPI {
 
-    //https://api.openweathermap.org/data/2.5/weather?q=london&appid=78766a1bdf46e5335be21f8f5614e330&units=metric
 
-    @GET("weather?&appid=78766a1bdf46e5335be21f8f5614e330&units=metric")
-    fun getWeather(@Query("q") city : String
+
+    @GET("weather?&units=metric")
+    fun getWeather(@Query("q") city : String,
+                   @Query("appid") apiKey : String = API_KEY
     ) : Single<WeatherModel>
 
 }
